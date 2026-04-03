@@ -25,3 +25,14 @@ sd(itens_embutidos)
 
 summary(imposto_anual)
 sd(imposto_anual)
+
+# Gráficos #
+ggplot(data, aes(x = preco)) + geom_histogram(bins = 10) + 
+  labs(title = "Histograma de preço", 
+       x = "Preço", 
+       y = "Frequência") + theme_minimal()
+
+ggplot(data, aes(x = metragem, y = imposto_anual)) + geom_point() + 
+  labs(title = "Gráfico de dispersão Imposto (y) vs Metragem (x)", 
+       x = "Metragem",
+       y = "Imposto Anual") + theme_minimal()
