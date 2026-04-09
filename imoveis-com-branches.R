@@ -2,7 +2,7 @@
 
 # Pacote #
 
-library(ggplot2) 
+library(ggplot2)
 
 # 1. Leitura e estrutura dos dados #
 
@@ -10,6 +10,11 @@ data = read.csv("imoveis.csv", header = T, sep = ";")
 str(data)
 
 # 2. Gráficos #
+
+ggplot(data, aes(x = metragem)) + geom_histogram(bins = 5) + 
+  labs(title = "Histograma de metragem", 
+       x = "Metragem", 
+       y = "Frequência") + theme_minimal()
 
 # 3. Medidas #
 
