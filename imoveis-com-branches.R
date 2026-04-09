@@ -18,7 +18,7 @@ ggplot(data, aes(x = metragem)) + geom_histogram(bins = 5) +
 
 # 3. Medidas #
 
-
-
-
+median(data$imposto_anual) 
+mean(data$imposto_anual)
+sd(data$imposto_anual)
 
